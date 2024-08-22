@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Love Coffee ☕️</title>
+    <style>
+      html {
+        font-family: sans-serif;
+        min-height: 100%;
+      }
+      body {
+        background: linear-gradient(
+          44.8deg,
+          rgba(247, 110, 73, 0.67) -53.1%,
+          rgba(251, 208, 98, 0.28) 49%
+        );
+        height: 100%;
+      }
+      .dark {
+        background: linear-gradient(
+          110.3deg,
+          rgb(238, 179, 123) 8.7%,
+          rgb(216, 103, 77) 47.5%,
+          rgb(114, 43, 54) 89.1%
+        );
+        height: 100%;
+      }
+      img {
+        width: 100%;
+        border-radius: 10px;
+        transition: all 350ms ease-in-out;
+      }
+      img:hover {
+        filter: brightness(1.4);
+      }
+      p {
+        line-height: 150%;
+        padding: 10px 20px;
+      }
+      .themeChange {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        border: 1px solid #953d31;
+        border-radius: 10px;
+        color: #953d31;
+        background-color: white;
+        transition: all 200ms ease-in-out;
+      }
+      .themeChange:hover {
+        background: #953d31;
+        color: white;
+        cursor: pointer;
+      }
+      .dark .themeChange {
+        background-color: white;
+        border: 1px solid white;
+        color: #953d31;
+        transition: all 200ms ease-in-out;
+      }
+      .dark .themeChange:hover {
+        background-color: #fff5de;
+        border: 1px solid #fff5de;
+        color: #953d31;
+      }
+      .learnMore {
+        display: block;
+        margin: 10px auto;
+        padding: 15px;
+        border: 1px solid #953d31;
+        border-radius: 10px;
+        color: white;
+        font-size: 15px;
+        background-color: #953d31;
+        transition: all 200ms ease-in-out;
+      }
+      .learnMore:hover {
+        background: transparent;
+        color: #953d31;
+        cursor: pointer;
+      }
+      h1 {
+        margin: 0;
+      }
+      .content {
+        background-color: white;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+        width: 500px;
+        margin: 0 auto;
+      }
+      .footer {
+        text-align: center;
+        margin: 10px auto;
+        color: white;
+        font-size: 15px;
+      }
+      .footer a {
+        color: white;
+        transition: all 200ms ease-in-out;
+      }
+      .footer a:hover {
+        color: #3e2002;
+      }
+      .coffee {
+        color: #63390e;
+      }
+      .mainImg {
+        width: 100%;
+        margin-bottom: 10px;
+        transition: all 350ms ease-in-out;
+      }
+      .mainImg:hover {
+        transform: scale(1.2);
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin: 0 auto;
+      }
+      .gallery img:hover {
+        transform: scale(1.7);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="themeChange">Change Theme</button>
+    <div class="content">
+      <h1>Mmm, <span class="coffee">Coffee</span> ☕️</h1>
+      <h3>Coffee is a hug in a mug</h3>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/687/original/pexels-igor-haritanovich-814387-1695052.jpg?1718924970"
+        class="mainImg"
+      />
+      <div class="gallery">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/672/original/pexels-chevanon-302896.jpg?1718912512"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/675/original/pexels-anna-pou-8329672.jpg?1718912953"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/670/original/pexels-ekrulila-2615323.jpg?1718912267"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/671/original/pexels-arya-bajra-283675810-15800367.jpg?1718912286"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/690/original/pexels-andrew-4264049.jpg?1718926089"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/129/689/original/pexels-ngqah83-885021.jpg?1718926073"
+        />
+      </div>
+      <p>
+        I love making coffee and drinking coffee.
+        <br />
+        Coffee is a beverage brewed from <strong>roasted coffee beans.</strong>
+        <br /><br />
+        Darkly colored, bitter, and slightly acidic, coffee has a stimulating
+        effect on humans, primarily due to its caffeine content. <br />
+        It has the highest sales in the world market for hot drinks.
+      </p>
+
+      <button class="learnMore">Learn more</button>
+    </div>
+    <div class="footer">
+      Coded by
+      <span>
+        <a
+          href="https://www.shecodes.io/graduates/135680-milim-kim-sinoy"
+          target="_blank"
+        >
+          <strong>MiliM</strong>
+        </a>
+        with HTML, CSS and JavaScript.
+      </span>
+    </div>
+    <script>
+      function changeBg() {
+        let bodyChange = document.querySelector("body");
+        bodyChange.classList.toggle("dark");
+        /* same work but longer way 
+        if (bodyChange.classList.contains("dark")) {
+          bodyChange.classList.remove("dark");
+        } else {
+          bodyChange.classList.add("dark");
+        }
+        */
+      }
+      let themeButton = document.querySelector(".themeChange");
+      themeButton.addEventListener("click", changeBg);
+
+      function subscribe() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let subscibed = document.querySelector(".learnMore");
+
+        if (name.length || email.length) {
+          alert(`Hey ${name}, stay tuned for more info!`);
+          subscibed.innerHTML = `${name}, you are subscribed!`;
+        } else {
+          alert("Please fill in the box if you want to subscribe");
+        }
+      }
+      let learnButton = document.querySelector(".learnMore");
+      learnButton.addEventListener("click", subscribe);
+    </script>
+  </body>
+</html>
